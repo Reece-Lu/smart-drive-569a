@@ -35,7 +35,7 @@
         <div class="container" id="learnmore">
           <div class="row">
             <div class="col text-center">
-              <button type="button" class="btn btn-light btn-lg">Learn More</button>
+              <button type="button" class="btn btn-light btn-lg" @click="viewCards()">Learn More</button>
             </div>
           </div>
         </div>
@@ -145,6 +145,9 @@ export default {
       // }).catch(() => {
       // this.$message.error('error inputs')
       // })
+    },
+    viewCards () {
+      window.scrollTo(0, document.body.scrollHeight)
     }
   }
 }

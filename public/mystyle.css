@@ -19,7 +19,7 @@
 }
 #mycloud {
     padding-top: 100px;
-    padding-bottom: 50px;
+
     padding-left: 55px;
 }
 #ctitle {
@@ -35,6 +35,15 @@
     padding-bottom: 50px;
 }
 #card1{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
+#sortby{
+    padding-left: 57px;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+}
+#sortbytext{
+    padding-right: 5px;
+}
