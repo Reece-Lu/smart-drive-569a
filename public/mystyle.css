@@ -8,7 +8,7 @@
 #learnmore {
     padding-top: 20px;
 }
-#cards {
+#logincards {
     padding-top: 40px;
 }
 #ad {
@@ -17,3 +17,24 @@
 #loginbtn {
     margin-bottom: 30px;
 }
+#mycloud {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-left: 55px;
+}
+#ctitle {
+    padding-top: 30px;
+}
+#card {
+    border-radius:25px;
+}
+#moreicon{
+    margin-top: 5px;
+}
+#cards{
+    padding-bottom: 50px;
+}
+#card1{
+    margin-bottom: 50px;
+}
+
