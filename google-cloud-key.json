@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wired-framework-369405",
+  "private_key_id": "1755d107d6423b8dc7bfdad869c21922e6e42b55",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC1yV3tgLSGtAXI\nQAtv7R2uak0ZFQi6q5p7n5dEvncunf1K4+223GBh2ddhQR3facZ+3BdvYDc+tgcq\nv62de4xXAbsCgwKj7jkehZ+eg2rWmDQ/27iSo1RaBWCxd4QNgl8LaO9NblDqMCZW\nre1NQEi8wY2bBO0Bav7bE45hpnT+fpNNDvTtg0fx071VRqNUXjot3Ne4U8F4g8RN\nfBJM60SVyBV+eUgdLiAw8m2WJ5tQaQRIEW0JZ7JrX0Jt2VR3HTpAv4Dn4Li7hS0C\nelbqJJ7bqhuK0L2z9O1JlRWwVJB4TeQsI6e026F9maKjnt1WsuqbZch1p08Ni2fo\nCYFv5/6lAgMBAAECgf9ltyeJtSzCMnTLvk/9UJh5kpSoZKg36ewCtHgG4AA8ia4h\nCszY8TCAtrD7ZKKf+sXYJlYN1OdiGDn558Kp5yndhTGibHWCHYO5WgNyWQ5utwjx\n6JLaNBznWTI9f2Qt3Vg5zBh3Qq9JkK9H4GbvCQFsAU2fd3dzW2rxKhdh8R7auvdO\nSzMruiHV9SfQE3CH2+LU/ylbCXcrjOWQEGPbDrtov9motUk1LC0/TPIu+EDTCdif\n6S0DJa6SWIW5QkMdf7z+IngDPgUdPKPHIe9UWY7C3xFt9qof+NUzSbnF9t6X338n\n+7PSOwqjnZJoiejEmyCvQ0VOIyTJY3+DJYnFaeECgYEA2FX8+9runOSWyR9JvrFY\nNjcJLYvbVyypHI414Zv0KLasOzKIYBQznlqMJaDo1fuim8MO6R5E7j73RWI+Wf77\ngRK3xK4iundlSZ2MvBWd59q5CESehW1CWN3xvOjYAtnXBk1kGnHh32DISLkj1iGF\n8/+QSeKwRP5M3vJUHRqj0K0CgYEA1x3C662LyVk46GG2Tw3iH265I6sBX3lRTVHI\n5rGgpyQ4F6FuimK1ou9u+tcDgDc5wXOgXEAgY2j1VSSVbPA+2dMAvI7aCtfkpaEE\nGx1YjuQ63xIYRd++rZ7RL/9xcIPYkUtJokySnish4nUIdcopTfx0y7Uc57KNCoSP\nSJbUDNkCgYEAp6Ih8YrZQQvEZ75t520GnKQS4Y8w/KDnve/YgqTVEkNSvGBQ2pps\n0TT6yiGgqkdd3nLMeAlzgmWaN9KD3Dq/6ml1qtsAoBrqipuhtRDPFh0fKe/6Igvi\n0HfS3P5UfAkPHJwViIRccTpOmEOWKFQ7tzF+PjKBQkUHje6bDR5ad9UCgYEAhBXp\nJu9kAtk/ISlGWRpMO0KweZ8585a5fkF2m3h8DcUmkBP2nRBpOUfNnEZEBwlh9E/8\nKkjR2liLM6GIAuEtpnByZlVMuxW/dpf8vm1xgCPRpkElGFp/aXo4NkGiNRUv+F8D\nMp3T9TzEzJlR/YmJfTJDwQVPX1F6Wvf0Rv0d7VkCgYAF+n4g/KTJBzIOprNEj7c4\nAlOLwscxTVUvGDfF8jiejw/Kbp5gjn3lJr2yLa6lNzzN5Z6nt602AHKllIuCtjZm\n4I+7GUtOVwm5iIHve3ZQQ5QHpyS0xJA6qzXMsYBFK6EC/RFJ8j9BM1qGX3z9PGJT\n5gzN+Zt2T7FFB1glfCuYqQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "id-69a-smart-drive@wired-framework-369405.iam.gserviceaccount.com",
+  "client_id": "105865921334474227458",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/id-69a-smart-drive%40wired-framework-369405.iam.gserviceaccount.com"
+}
