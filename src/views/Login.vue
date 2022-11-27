@@ -105,6 +105,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -116,36 +117,45 @@ export default {
   data () {
     return {
       loginInfo: {
-        userName: '',
+        username: '',
         password: ''
       },
       userName: '',
       userId: ''
     }
   },
+  created () {
+    navigator.geolocation.getCurrentPosition(res => {
+      console.log(res)
+    }, err => {
+      console.log(err)
+    }, {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    })
+  },
   methods: {
     handleLogin () {
-      localStorage.setItem('isLogin', '1')
-      this.$router.push('/homepage')
-      // loginrequest(this.loginInfo).then(res => {
-      // //console.log(res)
-      // //释放路由守卫
-      // localStorage.setItem('isLogin', '1')
-      // localStorage.setItem('user', JSON.stringify(res))
-      // this.userId = res.id
-      // this.userName = res.userName
-      // console.log(this.userId + 'from login')
-      // this.$store.commit('setUserId', this.userId)
-      // this.$store.commit('setUserName', this.userName)
-      // this.$router.push('/homepage')
-      // this.$notify({ type: 'success', message: 'Welcome！' })
-      // }).catch(() => {
-      // this.$message.error('error inputs')
-      // })
-    },
+      console.log(this.loginInfo)
+      loginrequest(this.loginInfo).then(res => {
+        // console.log(res)
+        // 释放路由守卫
+        localStorage.setItem('isLogin', '1')
+        localStorage.setItem('user', JSON.stringify(res))
+        res = JSON.stringify(res)
+        this.userId = res.id
+        this.userName = res.username
+        console.log(this.userId + 'from login')
+        this.$store.commit('setUserId', this.userId)
+        this.$store.commit('setUserName', this.userName)
+        this.$router.push('/homepage')
+      }).catch(() => {
+        this.$message.error('error inputs')
+      }),
     viewCards () {
       window.scrollTo(0, document.body.scrollHeight)
-    }
+      }
   }
 }
 
