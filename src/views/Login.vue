@@ -21,9 +21,6 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-          <a class="nav-link active" aria-current="page" href="#">
-            <img src="..\..\favicon_io\user.png" alt="icon" width="30" height="30">
-          </a>
         </div>
       </div>
     </nav>
