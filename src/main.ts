@@ -6,8 +6,10 @@ import store from './store'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
+import ElementUI from 'element-ui'
 Vue.config.productionTip = false
-// Vue.use(bootstrap)
+
+Vue.use(ElementUI)
 
 new Vue({
   el: '#app',

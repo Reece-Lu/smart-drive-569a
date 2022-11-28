@@ -1,72 +1,20 @@
 <template>
-  <div class="Homepage bg-dark">
+  <div>
   <el-container>
       <el-container>
-        <el-header>Header</el-header>
-        <el-aside width="200px">
+        <el-header>
+          <div id = 'headerBox'>
+            <p id = 'textInHeader'>Welcome to Smart Drive</p>
+          </div>
+        </el-header>
+        <el-main id = 'mainBox'>
           <input ref="uploadFile" type="file" name="file" id="file"  @change="changeImage($event)" />
-        </el-aside>
-        <el-main>Main</el-main>
-        <el-footer>Footer</el-footer>
+          <div class="container-fluid">
+            <a class="navbar-brand mb-0 h1" href="#" @click="backtoLogin()">Smart Drive</a>
+          </div>
+        </el-main>
       </el-container>
     </el-container>
-    <nav class="navbar navbar-expand-lg fixed-top bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand mb-0 h1" href="#" @click="backtoLogin()">Smart Drive</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                About
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Our Team</a></li>
-                <li><a class="dropdown-item" href="#">Our Story</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-          <a class="nav-link active" aria-current="page" href="#" @click="backtoLogin">
-            Logout
-          </a>
-        </div>
-      </div>
-    </nav>
-    <div id="mycloud">
-      <p class="h3 d-flex text-light">My Cloud</p>
-    </div>
-    <div id="sortby">
-      <p class="h6 d-flex text-light" id="sortbytext">Sort By</p> <a class="dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a><ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Time</a></li><li><a class="dropdown-item" href="#">A-Z</a></li><li><a class="dropdown-item" href="#">Size</a></li></ul>
-    </div>
-    <div class="row" id="cards">
-      <div class="col-lg-3 col-md-4 d-flex justify-content-center" id="card1">
-        <div class="card bg-light" id="card" style="width: 14rem; height: 14rem;">
-          <div class="card-body">
-            <div class="row">
-              <div class="col">
-                <img src="..\..\favicon_io\yellow_folder.png" alt="foldericon" width="80" height="80">
-              </div>
-              <div class="col" style=" text-align:right;">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Star</a></li>
-                  <li><a class="dropdown-item" href="#">Download</a></li>
-                  <li><a class="dropdown-item" href="#">Delete</a></li>
-                </ul>
-              </div>
-            </div>
-            <h5 class="card-title" id="ctitle">Victoria</h5>
-            <hr style="width:50%;height:2px;border-width:0;color:black;background-color:black">
-            <h6 class="card-subtitle mb-2 text-secondary">21 Mb</h6>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -89,7 +37,8 @@ export default {
         fileName: 'picture1'
       },
       fileLists: [],
-      locationInfo: ''
+      locationInfo: '',
+      cityList: []
     }
   },
   created () {
@@ -111,9 +60,23 @@ export default {
         this.fileLists = res
         console.log(this.fileLists)
       })
+      var j = 0
+      var i = 0
+      for (i = 0; i < this.fileLists.length; i++) {
+        for (j = 0; j < this.cityList.length; j++) {
+          if (this.fileLists[i] === this.cityList[j]) {
+            break
+          }
+          if (j === this.cityList.length - 1) {
+            this.cityList.push(this.fileLists[i])
+          }
+        }
+      }
+      console.log('100' + this.cityList)
     },
     backtoLogin () {
-      this.$router.push('/login')},
+      this.$router.push('/login')
+    },
     changeImage (e) {
       this.fileBag.file = e.target.files[0]
       this.formData = new FormData()
@@ -138,3 +101,36 @@ export default {
 
 }
 </script>
+
+<style>
+ #headerBox {
+   //background-color: white;
+   height: 60px;
+   border-style: solid;
+   border-color: green;
+}
+ #textInHeader{
+   margin-left: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+   margin-top: 10px;
+ }
+ #mainBox{
+   height:600px;
+   width: 1200px;
+   border-style: solid;
+   border-color: black;
+ }
+ .demo-table-expand {
+   font-size: 0;
+ }
+ .demo-table-expand label {
+   width: 90px;
+   color: #99a9bf;
+ }
+ .demo-table-expand .el-form-item {
+   margin-right: 0;
+   margin-bottom: 0;
+   width: 50%;
+ }
+</style>
